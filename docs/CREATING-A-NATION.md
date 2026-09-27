@@ -2,6 +2,8 @@
 
 For BA Custom Nations 0.1.1, Broken Arrow 1.2.0, and MelonLoader 0.7.3. No C# build is needed to author a nation pack.
 
+Install [Local Skirmish](https://github.com/BovineOverlord/broken-arrow-local-skirmish), tested with v2.6.3, for the offline battle and AI-deck workflow in this guide. Follow its setup instructions for MelonLoader and the modded launcher. [Balance Mod](https://github.com/BovineOverlord/broken-arrow-balance-mod) is optional; its stat overrides and exports are useful companions, but Custom Nations does not depend on it. See the [README requirements and installation order](../README.md#requirements).
+
 ## What a pack can create
 
 A pack creates a selectable country, two specializations, and separate unit variants based on existing game units. The supported edits are the nation and unit names, nation flag, unit category, purchase cost, and availability. Models, squad composition, weapons, armor, mobility, sounds, and abilities come from each template.
@@ -135,7 +137,7 @@ Start with the known working zombie template IDs:
 | 494 | ZOM Boomer |
 | 495 | ZOM Thrower |
 
-After database loading, `inventory.json` lists existing countries and specializations, including hidden entries, plus the templates requested by your current packs. A template's `modifications` value must be zero in this version. If you use the separate Balance Mod, its `Units_full.json` export can help find other original IDs; its unit-option export can help identify loadouts. The Balance Mod is not required to run a nation pack.
+After database loading, `inventory.json` lists existing countries and specializations, including hidden entries, plus the templates requested by your current packs. A template's `modifications` value must be zero in this version. If you use the separate [Balance Mod](https://github.com/BovineOverlord/broken-arrow-balance-mod), its `Units_full.json` export can help find other original IDs; its unit-option export can help identify loadouts. The Balance Mod is not required to run a nation pack.
 
 The shipped zombie pack reserves country 90, specializations 900 and 901, units 9490 through 9495, and availabilities 90000 through 90005. The tutorial example uses country 91, specializations 910 and 911, units 9510 and 9511, and availabilities 91000 and 91001.
 

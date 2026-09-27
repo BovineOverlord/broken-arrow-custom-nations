@@ -2,6 +2,8 @@
 
 A MelonLoader addon for creating selectable nations and unit variants from existing Broken Arrow units. The included Zombies nation contains Walkers, Runners, Spitters, Smokers, Boomer, and Thrower, with Horde and Mutations specializations.
 
+**Install [Local Skirmish](https://github.com/BovineOverlord/broken-arrow-local-skirmish) first to play custom nations in offline battles.** [Balance Mod](https://github.com/BovineOverlord/broken-arrow-balance-mod) is an optional companion, not a dependency.
+
 **For modders: [Create a nation, step by step](docs/CREATING-A-NATION.md).** The guide includes a complete example JSON pack, every supported field, custom flags, ID allocation, deck creation, troubleshooting, and distribution advice. Pack authors do not need to compile C#.
 
 ## New in 0.1.1
@@ -14,9 +16,20 @@ A MelonLoader addon for creating selectable nations and unit variants from exist
 
 ![Zombie flag](packs/assets/zombies-flag.png)
 
+## Requirements
+
+- **[Local Skirmish](https://github.com/BovineOverlord/broken-arrow-local-skirmish), tested with v2.6.3:** required for the supported offline battle workflow, including individual AI deck selection and custom ground-wave spawning. Custom Nations supplies nations, units, flags, and deck content; it does not provide its own battle launcher. Nation registration and deck editing can load without Local Skirmish, but the battle instructions below require it.
+- **MelonLoader 0.7.3 and its generated game assemblies:** required to load Custom Nations. Follow Local Skirmish's setup instructions for MelonLoader and the offline modded launcher, then launch the modded game once before installing this addon. This build targets Broken Arrow 1.2.0.
+- **[Balance Mod](https://github.com/BovineOverlord/broken-arrow-balance-mod): optional.** Use it for additional stat overrides and unit-data exports that can help pack authors find templates. Custom Nations sets its own pack-defined unit costs and does not require Balance Mod to register or play a nation. The observed gameplay tests used both companion mods installed.
+
 ## Installation and updating
 
-Requires MelonLoader 0.7.3, the generated game assemblies, and the existing offline modded launcher. The addon was built against Broken Arrow 1.2.0. Local Skirmish 2.6.3 is required for its local-battle integration.
+For a first installation:
+
+1. Install [Local Skirmish](https://github.com/BovineOverlord/broken-arrow-local-skirmish) and complete its modded-launcher setup.
+2. Launch the modded game once so MelonLoader generates the required assemblies, then close it.
+3. Optionally install [Balance Mod](https://github.com/BovineOverlord/broken-arrow-balance-mod).
+4. Install Custom Nations using the command below, then launch with the existing offline modded shortcut.
 
 Download this repository using **Code > Download ZIP**, then extract it. Close the game and run:
 
