@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "key": "outbreak-colony",
+  "name": "Outbreak Colony",
+  "countryId": 91,
+  "flag": "assets/zombies-flag.png",
+  "maxPoints": 640,
+  "mapGroundWaves": true,
+  "specializations": [
+    { "id": 910, "name": "Shamblers" },
+    { "id": 911, "name": "Hunters" }
+  ],
+  "units": [
+    {
+      "id": 9510,
+      "templateId": 490,
+      "specializationId": 910,
+      "availabilityId": 91000,
+      "name": "Colony Walkers",
+      "category": "Infantry",
+      "cost": 40,
+      "count": 8
+    },
+    {
+      "id": 9511,
+      "templateId": 491,
+      "specializationId": 911,
+      "availabilityId": 91001,
+      "name": "Colony Runners",
+      "category": "Infantry",
+      "cost": 40,
+      "count": 8
+    }
+  ]
+}

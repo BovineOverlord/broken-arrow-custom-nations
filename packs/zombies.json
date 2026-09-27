@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "key": "zombies",
+  "countryId": 90,
+  "name": "Zombies",
+  "flag": "assets/zombies-flag.png",
+  "maxPoints": 2000,
+  "mapGroundWaves": true,
+  "specializations": [
+    { "id": 900, "name": "Horde" },
+    { "id": 901, "name": "Mutations" }
+  ],
+  "units": [
+    { "id": 9490, "templateId": 490, "specializationId": 900, "availabilityId": 90000, "name": "Walkers", "category": "Infantry", "cost": 40, "count": 8 },
+    { "id": 9491, "templateId": 491, "specializationId": 900, "availabilityId": 90001, "name": "Runners", "category": "Infantry", "cost": 40, "count": 8 },
+    { "id": 9492, "templateId": 492, "specializationId": 901, "availabilityId": 90002, "name": "Spitters", "category": "Infantry", "cost": 40, "count": 8 },
+    { "id": 9493, "templateId": 493, "specializationId": 901, "availabilityId": 90003, "name": "Smokers", "category": "Infantry", "cost": 40, "count": 8 },
+    { "id": 9494, "templateId": 494, "specializationId": 900, "availabilityId": 90004, "name": "Boomer", "category": "Infantry", "cost": 40, "count": 8 },
+    { "id": 9495, "templateId": 495, "specializationId": 901, "availabilityId": 90005, "name": "Thrower", "category": "Infantry", "cost": 40, "count": 8 }
+  ]
+}
