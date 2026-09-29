@@ -12,7 +12,7 @@ The current implementation accepts templates without loadout modifications. It r
 
 ## Quick start: a complete second nation
 
-1. Install Custom Nations and launch the modded game once, then close it.
+1. Extract the complete Custom Nations download and double-click `install.bat`. No compilation is required. Launch the modded game once, then close it.
 2. Find `UserData/BACustomNations/packs` under the game installation.
 3. Copy this package's [outbreak-colony.json](../examples/outbreak-colony.json) into that folder.
 4. Restart the modded game. Open the deck builder and look for **Outbreak Colony**, with **Shamblers** and **Hunters** specializations.

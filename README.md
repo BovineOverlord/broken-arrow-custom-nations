@@ -29,9 +29,13 @@ For a first installation:
 1. Install [Local Skirmish](https://github.com/BovineOverlord/broken-arrow-local-skirmish) and complete its modded-launcher setup.
 2. Launch the modded game once so MelonLoader generates the required assemblies, then close it.
 3. Optionally install [Balance Mod](https://github.com/BovineOverlord/broken-arrow-balance-mod).
-4. Install Custom Nations using the command below, then launch with the existing offline modded shortcut.
+4. Download this repository using **Code > Download ZIP**, right-click the downloaded ZIP and choose **Extract All**.
+5. Open the extracted folder and double-click **`install.bat`**. Keep the whole folder together, including `dist`, `packs`, and `scripts`.
+6. Launch with the existing offline modded shortcut.
 
-Download this repository using **Code > Download ZIP**, then extract it. Close the game and run:
+**No compilation or development tools are required.** The download includes the compiled mod. Do not rename `install.ps1` to `.bat`; the included `install.bat` runs it for you and keeps the window open so you can read the result.
+
+The installer detects Steam libraries and common game locations. If it cannot find the game, it asks for the folder containing `BrokenArrow.exe`. Close the game before installing. If you have multiple installations, you can choose one explicitly using PowerShell:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\install.ps1 -GameDir "D:\Games\Broken Arrow"
@@ -81,9 +85,12 @@ To uninstall, close the game and remove `Mods/BACustomNations.dll`. Saved custom
 
 Requires a .NET SDK and the game's generated MelonLoader assemblies. No game DLLs or extracted game assets are included.
 
+This section is only for developers changing the C# code. Players and JSON nation-pack authors use the precompiled download above.
+
 ```powershell
 dotnet build src\BACustomNations.csproj -c Release -p:GameDir="D:\Games\Broken Arrow"
 dotnet run --project tests\RulesTests.csproj -- packs\zombies.json
+powershell -NoProfile -ExecutionPolicy Bypass -File tests\Test-Installer.ps1
 ```
 
 The project targets .NET 6 to match the loader. Managed checks cover definition validation, pack coexistence, wave-category selection, flag paths, and PNG header limits. They do not execute combat or verify every menu.
